@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import { data } from "./data";
-import Todo from "./Todo";
+import { data } from './data';
+import TodoForm from './TodoForm';
 
-class HogwartsStudents extends React.Component {
+class Todo extends React.Component {
   constructor() {
     super();
     this.state = {
       todoData: data,
-      task: ""
+      task: '',
     };
   }
 
   addTodo = e => {
     e.preventDefault();
-
     const newTodo = {
-      task: this.state.name
+      task: this.state.name,
     };
     this.setState({
       todoData: [...this.state.todoData, newTodo],
-      task: ""
+      name: '',
     });
   };
 
@@ -33,9 +32,10 @@ class HogwartsStudents extends React.Component {
   render() {
     return (
       <div>
+
         <div>
           {this.state.todoData.map(todoFromMap => (
-            <Todo taskOnProps={todoFromMap} />
+            <TodoForm taskOnProps={todoFromMap} />
           ))}
         </div>
 
@@ -47,7 +47,8 @@ class HogwartsStudents extends React.Component {
             name="name"
           />
 
-          <button>Add a Todo</button>
+          <button>Add Todo</button>
+          
         </form>
         <button>Clear</button>
       </div>
@@ -55,4 +56,4 @@ class HogwartsStudents extends React.Component {
   }
 }
 
-export default HogwartsStudents;
+export default Todo;

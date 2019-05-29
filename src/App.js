@@ -1,8 +1,5 @@
-import React from 'react';
-import Todo from './components/TodoComponents/Todo'
-
-
-
+import React from 'react'
+import Todo from './components/TodoComponents/Todo';
 class App extends React.Component {
   render() {
     return (
@@ -13,5 +10,4 @@ class App extends React.Component {
   }
 }
 
-
-export default App;
+export default App
