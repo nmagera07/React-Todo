@@ -28,7 +28,7 @@ span {
   font-family: sans-serif;
   text-align: center;
   padding: 0 36px;
-  max-width: 665px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -65,8 +65,8 @@ h1 {
 }
 form {
   width: 50%;
-  display: flex;
-  justify-content: flex-end;
+  /* display: flex; */
+  justify-content: center;
 }
 form > input {
   background-color: #ccccdb;
@@ -78,6 +78,8 @@ form > input {
   color: white;
   border: 1px solid #292727;
   border-radius: 5px;
+  margin-left: 100px;
+  
 }
 
 button {
@@ -103,3 +105,6 @@ input::placeholder {
   margin-top: 16px;
 }
 
+.form-div {
+    width: 600px;
+}
