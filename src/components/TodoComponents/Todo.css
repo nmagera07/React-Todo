@@ -65,8 +65,7 @@ h1 {
 }
 form {
   width: 50%;
-  /* display: flex; */
-  justify-content: center;
+
 }
 form > input {
   background-color: #ccccdb;
@@ -105,6 +104,10 @@ input::placeholder {
   margin-top: 16px;
 }
 
-.form-div {
-    width: 600px;
+
+.btn {
+    width: 300px;
+    position: relative;
+    left: 208px;
+    bottom: 52px;
 }

@@ -32,10 +32,9 @@ class TodoForm extends React.Component {
             onChange={this.handleChanges}
             placeholder="Enter Todo Item"
           />
-          
+          <button class="first-btn">Add Todo</button>
         </form>
         <div className="btn">
-            <button class="first-btn">Add Todo</button>
         <button onClick={this.props.deleteItem} >
           Clear Completed
         </button>
