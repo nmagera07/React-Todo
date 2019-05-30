@@ -4,15 +4,25 @@ import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
 import "./components/TodoComponents/Todo.css";
 
-const groceries = [
+const tasks = [
   {
-    name: "Organize Garage",
+    task: "Mow the lawn",
     id: 1528817077286,
     completed: false
   },
   {
-    name: "Bake Cookies",
-    id: 1528817084358,
+    task: "Vacuum the floor",
+    id: 15288170843745,
+    completed: false
+  },
+  {
+    task: "Buy food",
+    id: 15288170843897,
+    completed: false
+  },
+  {
+    task: "Clean garage",
+    id: 15288170843333,
     completed: false
   }
 ];
@@ -21,14 +31,14 @@ class List extends React.Component {
   constructor() {
     super();
     this.state = {
-      groceries
+      tasks
     };
   }
 
   toggleItem = id => {
     this.setState(prevState => {
       return {
-        groceries: prevState.groceries.map(item => {
+        tasks: prevState.tasks.map(item => {
           if (item.id === id) {
             return {
               ...item,
@@ -45,13 +55,13 @@ class List extends React.Component {
   addItem = itemName => {
     // add an item from the form to our list
     const newItem = {
-      name: itemName,
+      task: itemName,
       id: Date.now(),
       purchased: false
     };
     this.setState(prevState => {
       return {
-        groceries: [...prevState.groceries, newItem]
+        tasks: [...prevState.tasks, newItem]
       };
     });
   };
@@ -63,10 +73,7 @@ class List extends React.Component {
           <h1>Todo List</h1>
           <TodoForm addItem={this.addItem} />
         </div>
-        <TodoList
-          groceryItems={this.state.groceries}
-          toggleItem={this.toggleItem}
-        />
+        <TodoList taskItems={this.state.tasks} toggleItem={this.toggleItem} />
       </div>
     );
   }

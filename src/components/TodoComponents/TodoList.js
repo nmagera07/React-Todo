@@ -1,22 +1,16 @@
 import React from "react";
 
-import GroceryItem from "./Todo";
+import Todo from "./Todo";
 
-const GroceryList = props => {
+const TodoList = props => {
   console.log(props);
   return (
     <div className="shopping-list">
-      {props.groceryItems.map(item => {
-        return (
-          <GroceryItem
-            key={item.id}
-            toggleItem={props.toggleItem}
-            item={item}
-          />
-        );
+      {props.taskItems.map(item => {
+        return <Todo key={item.id} toggleItem={props.toggleItem} item={item} />;
       })}
     </div>
   );
 };
 
-export default GroceryList;
+export default TodoList;
