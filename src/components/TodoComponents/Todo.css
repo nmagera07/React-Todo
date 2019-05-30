@@ -72,11 +72,10 @@ form > input {
   border: 0;
   padding: 6px 0;
   font-size: 1rem;
-  width: 260px;
+  width: 400px;
   outline: 0;
   color: white;
   border: 1px solid #292727;
-  margin-right: 8px;
   border-radius: 5px;
 }
 
@@ -100,4 +99,10 @@ input::placeholder {
 
 .clear-btn {
   margin-top: 16px;
+}
+
+.second-btn {
+  position: relative;
+  left: 75px;
+  bottom: 60px;
 }

@@ -22,26 +22,21 @@ class TodoForm extends React.Component {
     });
   };
 
-  deleteItem = () => {
-    const removed = this.state.tasks
-    removed.filter(element => element.completed !== false)
-    this.setState({removed})
-  }
-    
-
-
   render() {
     return (
-      <form onSubmit={this.addItem}>
-        <input
-          value={this.state.item}
-          name="item"
-          onChange={this.handleChanges}
-          placeholder="Enter Todo Item"
-        />
-        <button>Add Todo</button>
-        <button >Clear Completed</button>
-      </form>
+      <div>
+        <form onSubmit={this.addItem}>
+          <input
+            value={this.state.item}
+            name="item"
+            onChange={this.handleChanges}
+            placeholder="Enter Todo Item"
+          />
+          <button class="first-btn">Add Todo</button>
+          
+        </form>
+        <button onClick={this.props.deleteItem} className="second-btn">Clear Completed</button>
+      </div>
     );
   }
 }

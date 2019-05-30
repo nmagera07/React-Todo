@@ -66,12 +66,18 @@ class List extends React.Component {
     });
   };
 
+  deleteItem = () => {
+    this.setState(prevState => {
+      return {tasks: prevState.tasks.filter(todo => !todo.completed)}
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <div className="header">
           <h1>Todo List</h1>
-          <TodoForm addItem={this.addItem} />
+          <TodoForm addItem={this.addItem} deleteItem={this.deleteItem}/>
         </div>
         <TodoList taskItems={this.state.tasks} toggleItem={this.toggleItem} />
       </div>
