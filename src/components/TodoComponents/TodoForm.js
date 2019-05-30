@@ -33,9 +33,14 @@ class TodoForm extends React.Component {
             placeholder="Enter Todo Item"
           />
           <button class="first-btn">Add Todo</button>
-          
         </form>
-        <button onClick={this.props.deleteItem} className="second-btn">Clear Completed</button>
+        <div className="btn">
+        <button onClick={this.props.deleteItem} >
+          Clear Completed
+        </button>
+        <button onClick={this.props.deleteAll}>Clear All</button>
+        </div>
+        
       </div>
     );
   }

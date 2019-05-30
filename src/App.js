@@ -68,7 +68,13 @@ class List extends React.Component {
 
   deleteItem = () => {
     this.setState(prevState => {
-      return {tasks: prevState.tasks.filter(todo => !todo.completed)}
+      return { tasks: prevState.tasks.filter(task => !task.completed) };
+    });
+  };
+
+  deleteAll = () => {
+    this.setState(prevState => {
+      return { tasks: prevState.tasks.filter(task => task < 0)}
     })
   }
 
@@ -77,7 +83,7 @@ class List extends React.Component {
       <div className="App">
         <div className="header">
           <h1>Todo List</h1>
-          <TodoForm addItem={this.addItem} deleteItem={this.deleteItem}/>
+          <TodoForm addItem={this.addItem} deleteItem={this.deleteItem} deleteAll={this.deleteAll}/>
         </div>
         <TodoList taskItems={this.state.tasks} toggleItem={this.toggleItem} />
       </div>

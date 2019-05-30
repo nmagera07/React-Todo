@@ -35,6 +35,7 @@ span {
 .header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 h1 {
@@ -95,14 +96,10 @@ input::placeholder {
   background-color: #cbcbd1;
   opacity: 1;
   text-align: center;
+  
 }
 
 .clear-btn {
   margin-top: 16px;
 }
 
-.second-btn {
-  position: relative;
-  left: 75px;
-  bottom: 60px;
-}
