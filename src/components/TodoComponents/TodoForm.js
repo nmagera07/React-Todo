@@ -24,7 +24,7 @@ class TodoForm extends React.Component {
 
   render() {
     return (
-      <div class="form-div">
+      <div>
         <form onSubmit={this.addItem}>
           <input
             value={this.state.item}
@@ -32,7 +32,7 @@ class TodoForm extends React.Component {
             onChange={this.handleChanges}
             placeholder="Enter Todo Item"
           />
-          <button class="first-btn">Add Todo</button>
+          <button>Add Todo</button>
         </form>
         <div className="btn">
         <button onClick={this.props.deleteItem} >

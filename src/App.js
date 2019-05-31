@@ -74,7 +74,7 @@ class List extends React.Component {
 
   deleteAll = () => {
     this.setState(prevState => {
-      return { tasks: prevState.tasks.filter(task => task < 0)}
+      return { tasks: []}
     })
   }
 
